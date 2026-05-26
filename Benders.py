@@ -204,7 +204,7 @@ class Benders:
 
         self.feas.model.optimize()
 
-        # If F(u^k) < 0 then the solution is infeasible
+        # If F(u^k) > 0 then the solution is infeasible
         if self.feas.model.ObjVal > 0 + self.feas_tol:
 
             # Add feasibility cut
